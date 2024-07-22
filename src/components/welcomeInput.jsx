@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { firebase } from "../firebase";
 import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
 import "../App.css";
@@ -11,11 +11,11 @@ export const WelcomeInput = () => {
   const [entradas, setEntradas] = useState([]);
   const [disabled, setDisabled] = useState(true);
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const handleClick = async () => {
     localStorage.setItem("username", name);
-    navigate("/home");
+  //  navigate("/home");
 
     const docRef = doc(firebase, "fulbito", "fulbito");
     try {
